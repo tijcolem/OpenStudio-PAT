@@ -155,4 +155,4 @@ Controller.prototype.FinishedPageCallback = function() {
   logCurrentPage();
 
   gui.clickButton(buttons.FinishButton);
-};p
+};
