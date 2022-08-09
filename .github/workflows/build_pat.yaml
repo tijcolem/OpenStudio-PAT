@@ -90,6 +90,7 @@ jobs:
         echo "Using vcvarsall to initialize the development environment"
         call vcvarsall.bat x64
         cmake -G "Visual Studio 16 2019" -A x64 -DCMAKE_BUILD_TYPE=Release ..
+        cmake --build . --target package -j 2
       
     - name: Configure CMake & build (Linux)
       working-directory: ./build
