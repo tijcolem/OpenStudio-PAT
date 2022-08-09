@@ -89,12 +89,13 @@ jobs:
         set -x
         cmake -DCMAKE_BUILD_TYPE=Release \
               -DCPACK_BINARY_DEB=ON \
+              -DCPACK_BINARY_IFW=OFF \
               ../
         cmake --build . --target package -j 2
 
     - name: Configure CMake & build (macOS)
       working-directory: ./build
-      if: runner.os != 'macOS'
+      if: runner.os == 'macOS'
       shell: bash
       run: |
         set -x
