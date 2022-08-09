@@ -83,7 +83,7 @@ jobs:
       
     - name: Configure CMake & build (Linux)
       working-directory: ./build
-      if: runner.os != 'Linux'
+      if: runner.os == 'Linux'
       shell: bash
       run: |
         set -x
@@ -94,7 +94,7 @@ jobs:
 
     - name: Configure CMake & build (macOS)
       working-directory: ./build
-      if: runner.os != 'Linux'
+      if: runner.os != 'macOS'
       shell: bash
       run: |
         set -x
