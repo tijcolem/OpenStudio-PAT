@@ -100,6 +100,10 @@ jobs:
         cmake -DCMAKE_BUILD_TYPE=Release \
               -DCPACK_BINARY_DEB=ON \
               -DCPACK_BINARY_IFW=OFF \
+              -DCPACK_BINARY_TGZ=OFF \
+              -DCPACK_BINARY_TZ=OFF \
+              -DCPACK_BINARY_STGZ=OFF \
+              -DCPACK_BINARY_TBZ2=OFF \
               ../
         cmake --build . --target package -j 2
 
